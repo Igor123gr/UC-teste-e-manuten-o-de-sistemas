@@ -1,0 +1,11 @@
+1 - Objetivo do teste - avaliar todas as funções da calculadora e se elas cumprem o que prometem
+2 - metodologia do teste - o teste sera um teste exploratório, onde manualmente se testarão as funções propostas pela calculadora
+3 - escopo e testes - será incluido os dois inputs de números, e as funções somar, subtrair,dividir e multiplicação
+4 - tipos de teste - teste funcional e teste de sistema
+5 - Forma de execução - serão realizados manualmente
+6 - Ambiente de teste - No sistema operacional  windows com o navegador brave serão realizados com a extensão live server do vs code rodando o código
+7 - Papéis e responsabilidades - DEV = Igor Fontaniva, Gerente de testes = Igor Fontaniva, QA = Igor Fontaniva
+8 - Riscos e contingencias - O unico risco é se eu mesmo sem querer querendo ter colocado algum virus, trojam ou cavalo de tróia no arquivo da calculadora
+9 - Ferramenta de Teste - serão o vs code e sua extensão chamada live server
+10 - Métricas de Qualidade - Tudo funciona perfeitamente como o produto prometia
+
