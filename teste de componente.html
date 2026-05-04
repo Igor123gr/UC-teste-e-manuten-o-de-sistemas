@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Calculadora</title>
+
+</head>
+
+<body>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="multiplicação()">Multiplicação</button>
+    <button onclick="testardiv()">Teste se o resultado vai aparecer</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function somar() {
+        const n1 = Number(document.getElementById("num1").value) 
+        const n2 = Number(document.getElementById("num2").value)
+
+        
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 + n2);
+        }
+        function subtrair() {
+            const n1 =  document.getElementById("num1").value
+            const n2 = document.getElementById("num2").value
+
+            
+                document.getElementById("resultado").textContent =
+                    "Resultado: " + (n1 - (n2));
+            
+
+        }
+         function dividir() {
+        const n1 = document.getElementById("num1").value
+        const n2 = document.getElementById("num2").value
+
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 / n2);
+        
+        if (n2 == 0){
+            document.getElementById("resultado").textContent =
+                "Não pode divisão por zero amigo";
+        
+    }
+}
+     function multiplicação() {
+        const n1 = document.getElementById("num1").value
+        const n2 = document.getElementById("num2").value
+
+       
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 * n2);
+        
+    }
+
+    function testardiv(){
+        const n1 = document.getElementById("num1").value
+        const n2 = document.getElementById("num2").value
+
+        if (resultado.textContent = "Resultado:" + (n1 + n2) || "Resultado:" + (n1 - (n2)) || "Resultado:" + (n1 * n2) || "Resultado:" + (n1 / n2) )
+        alert("A div existe!!!!!!!")
+
+    }
+
+</script>
+
+</html>
