@@ -13,6 +13,8 @@
     <button onclick="dividir()">Dividir</button>
     <button onclick="multiplicação()">Multiplicação</button>
     <button onclick="testardiv()">Teste se o resultado vai aparecer</button>
+    <button onclick="testarinput1()">Teste se o input1 existe</button>
+    <button onclick="testarinput2()">Teste se o input2 existe</button>
     <p id="resultado"></p>
 </body>
 <script>
@@ -63,8 +65,37 @@
 
         if (resultado.textContent = "Resultado:" + (n1 + n2) || "Resultado:" + (n1 - (n2)) || "Resultado:" + (n1 * n2) || "Resultado:" + (n1 / n2) )
         alert("A div existe!!!!!!!")
+    else {
+        alert("a div não existe")
+    }
 
     }
+    function testarinput1() {
+        const input1 = document.querySelector("#num1")
+
+        if (input1) {
+            alert("o input existe!!!!!!")
+
+        }
+
+        else {
+            alert("o input não existe")
+        }
+    }
+    
+    function testarinput2() {
+        const input2 = document.querySelector("#num2")
+
+        if (input2) {
+            alert("o input existe!!!!!!")
+
+        }
+
+        else {
+            alert("o input não existe")
+        }
+    }
+
 
 </script>
 
