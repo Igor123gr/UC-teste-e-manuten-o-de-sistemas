@@ -11,120 +11,123 @@
     <button onclick="Clicarsomar()">Somar</button>
     <button onclick="Clicarsubtrair()">Subtrair</button>
     <button onclick="Clicardividir()">Dividir</button>
-    <button onclick="Clicarmultiplicação()">Multiplicação</button>
+    <button onclick="Clicarmultiplicacão()">Multiplicação</button>
     <button onclick="testetodasasfunções()">Botão pra testar todas as funções</button>
     <p id="resultado"></p>
 </body>
 <script>
-    
-    function somar(n1,n2){
+
+
+    function somar(n1, n2) {
         return n1 + n2
     }
-function subtrair(n1,n2){
+    function subtrair(n1, n2) {
         return n1 - n2
     }
-    function dividir(n1,n2){
-        return n1/n2
+    function dividir(n1, n2) {
+        console.log(n1/n2)
+        return (n1 / n2)
+
     }
-    function multiplicação(n1,n2){
-        return n1 * n2
+    function multiplicacão(n1, n2) {
+        return (n1 * n2)
     }
 
 
 
     function Clicarsomar() {
         let n1 = 10
-        n1 = document.getElementById("num1").value;
+        n1 = Number(document.getElementById("num1").value);
         let n2 = 10
-        n2 = document.getElementById("num2").value;
+        n2 = Number(document.getElementById("num2").value);
         let men = somar(n1, n2);
 
 
-       ///////tirei o NaN para testar só a função somar//////// 
-            document.getElementById("resultado").textContent =
-                "Resultado: " + men;
-        }
+        ///////tirei o NaN para testar só a função somar//////// 
+        document.getElementById("resultado").textContent =
+            "Resultado: " + men;
+    }
 
-    function testesomar(){
-        somar(10,10) 
-        if (somar(10,10) !== 20) {
-            alert ("função somar falhou")
+    function testesomar() {
+        somar(10, 10)
+        if (somar(10, 10) !== 20) {
+            alert("função somar falhou")
         }
         else {
-            alert ("somar funcionando")
+            alert("somar funcionando")
         }
 
     }
-    
-        function Clicarsubtrair() {
-            let n1 = 12
-            n1 = document.getElementById("num1").value
-            let n2 = -8
-            n2 = document.getElementById("num2").value
 
-                document.getElementById("resultado").textContent =
-                    "Resultado: " + (n1 - (n2));
+    function Clicarsubtrair() {
+        let n1 = 12
+        n1 = document.getElementById("num1").value
+        let n2 = -8
+        n2 = document.getElementById("num2").value
 
-        }
+        document.getElementById("resultado").textContent =
+            "Resultado: " + (n1 - (n2));
 
-        
-    function testesubtrair(){
-        subtrair(12,-8) 
-        if (subtrair(12,-8) !== 20 ) {
-            alert ("função subtrair falhou")
+    }
+
+
+    function testesubtrair() {
+        subtrair(12, -8)
+        if (subtrair(12, -8) !== 20) {
+            alert("função subtrair falhou")
         }
         else {
-            alert ("subtrair funcionando")
+            alert("subtrair funcionando")
         }
 
     }
-         function Clicardividir() {
+    function Clicardividir() {
         let n1 = 40
-         n1 = document.getElementById("num1").value
+        n1 = Number(document.getElementById("num1").value)
         let n2 = 2
-         n2 = document.getElementById("num2").value
+        n2 = Number(document.getElementById("num2").value)
 
-           if (n1 == 40){ document.getElementById("resultado").textContent = "Resultado: " + (n1 / n2)
-         }
-        if (n2 == 0){
+        document.getElementById("resultado").textContent = "Resultado: " + (n1 / n2)
+
+        if (n2 == 0) {
             document.getElementById("resultado").textContent =
                 "Não pode divisão por zero amigo";
         }
     }
 
-        function testedividir(){
-        dividir(40,2) 
-        if (dividir(12,-8) !== 20 ) {
-            alert ("função dividir falhou")
+    function testedividir() {
+        dividir(40, 2)
+        if (dividir(40, 2) != 20) {
+            alert("função dividir falhou")
         }
         else {
-            alert ("dividir fumcionando")
+            alert("dividir fumcionando")
         }
 
     }
-     function Clicarmultiplicação() {
-        let n1 = 20
-        n1 = document.getElementById("num1").value
-        let n2 = 2 
-        n2 = document.getElementById("num2").value
+    function Clicarmultiplicacão() {
+        let n1 = 10
+        n1 = Number(document.getElementById("num1").value)
+        let n2 = 2
+        n2 = Number(document.getElementById("num2").value) 
 
-            document.getElementById("resultado").textContent = "Resultado: " + (n1 * n2)
-                
-        }
-        function testemultiplicação(){
-        multiplicação(20,2) 
-        if (multiplicação(20,2) !== 20 ) {
-            alert ("função multiplicar falhou")
+        document.getElementById("resultado").textContent = "Resultado: " + (n1 * n2)
+
+    }
+    function testemultiplicacão() {
+        multiplicacão(10, 2)
+        if (multiplicacão(10, 2) != 20) {
+            alert("função multiplicar falhou")
         }
         else {
-            alert ("multiplicar funciona")
+            alert("multiplicar funciona")
         }
     }
     function testetodasasfunções() {
         testesomar()
         testesubtrair()
         testedividir()
-        testemultiplicação()
+        testemultiplicacão()
     }
 
 </script>
