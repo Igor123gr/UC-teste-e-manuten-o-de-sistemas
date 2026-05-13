@@ -60,10 +60,10 @@
     }
 
     function testardiv(){
-        const n1 = document.getElementById("num1").value
-        const n2 = document.getElementById("num2").value
+        const n1 = Number(document.getElementById("num1").value)
+        const n2 = Number(document.getElementById("num2").value)
 
-        if (resultado.textContent = "Resultado:" + (n1 + n2) || "Resultado:" + (n1 - (n2)) || "Resultado:" + (n1 * n2) || "Resultado:" + (n1 / n2) )
+        if (resultado.textContent = "Resultado:" + (n1 + n2) || "Resultado:" + (n1 - n2) || "Resultado:" + (n1 * n2) || "Resultado:" + (n1 / n2) )
         alert("A div existe!!!!!!!")
     else {
         alert("a div não existe")
