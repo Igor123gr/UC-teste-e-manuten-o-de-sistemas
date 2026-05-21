@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Calculadora</title>
+
+</head>
+
+<body>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="multiplicação()">Multiplicação</button>
+    <button onclick="porgentagem()">porgentagem</button>
+    <p id="resultado"></p>
+    <button onclick="tutorial()" >Clique para ver um tutorial de como a porgentgem funciona</button>
+    <div id="tutpor"></div>
+    <button onclick="sairtut()">Sair do tutorial</button>
+</body>
+<script>
+    function somar() {
+        const n1 = Number(document.getElementById("num1").value) 
+        const n2 = Number(document.getElementById("num2").value);
+
+
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 + n2);
+    }
+        function subtrair() {
+            const n1 = Number(document.getElementById("num1").value);
+            const n2 = Number(document.getElementById("num2").value);
+
+            
+                document.getElementById("resultado").textContent =
+                    "Resultado: " + (n1 - (n2));
+
+        }
+         function dividir() {
+        const n1 = Number(document.getElementById("num1").value);
+        const n2 = Number(document.getElementById("num2").value);
+
+        if (n2 == 0){
+            document.getElementById("resultado").textContent =
+                "Não pode divisão por zero amigo";
+        }
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 / n2);
+        
+       
+    }
+    
+     function multiplicação() {
+        const n1 = Number(document.getElementById("num1").value);
+        const n2 = Number(document.getElementById("num2").value);
+
+            document.getElementById("resultado").textContent =
+                "Resultado: " + (n1 * n2);
+    }
+
+    function porgentagem() {
+        const n1 = Number(document.getElementById("num1").value);
+        const n2 = Number(document.getElementById("num2").value);
+        let porcent = n2 / 100
+        console.log(porcent)
+
+        document.getElementById("resultado").textContent = "Resultado: " + (n1 * porcent)
+    }
+
+    function tutorial() {
+        document.getElementById("tutpor").textContent = "Bom dia, senhor ou senhora, a porcentagem funciona assim, o primeiro número que você digita, é a sua base, e o seu segundo número é quantos porcento, você quer daquela base, tenha um bom dia, e que Deus te abençoe."
+    }
+
+    function sairtut() {
+        document.getElementById("tutpor").textContent = ""
+    }
+    </script>
+</html>

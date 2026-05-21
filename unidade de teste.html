@@ -13,6 +13,11 @@
     <button onclick="Clicardividir()">Dividir</button>
     <button onclick="Clicarmultiplicacão()">Multiplicação</button>
     <button onclick="testetodasasfunções()">Botão pra testar todas as funções</button>
+    <button onclick="porgentagem()">porgentagem</button>
+    <p id="resultado"></p>
+    <button onclick="tutorial()" >Clique para ver um tutorial de como a porgentgem funciona</button>
+    <div id="tutpor"></div>
+    <button onclick="sairtut()">Sair do tutorial</button>
     <p id="resultado"></p>
 </body>
 <script>
@@ -31,6 +36,10 @@
     }
     function multiplicacão(n1, n2) {
         return (n1 * n2)
+    }
+    function por(n1, n2){
+        let porcento = n2 / 100
+        return (n1 * porcento)
     }
 
 
@@ -52,6 +61,7 @@
         somar(10, 10)
         if (somar(10, 10) !== 20) {
             alert("função somar falhou")
+            console.log("1")
         }
         else {
             alert("somar funcionando")
@@ -75,6 +85,7 @@
         subtrair(12, -8)
         if (subtrair(12, -8) !== 20) {
             alert("função subtrair falhou")
+            console.log("2")
         }
         else {
             alert("subtrair funcionando")
@@ -99,6 +110,7 @@
         dividir(40, 2)
         if (dividir(40, 2) != 20) {
             alert("função dividir falhou")
+            console.log("3")
         }
         else {
             alert("dividir fumcionando")
@@ -118,17 +130,52 @@
         multiplicacão(10, 2)
         if (multiplicacão(10, 2) != 20) {
             alert("função multiplicar falhou")
+            console.log("4")
         }
         else {
             alert("multiplicar funciona")
         }
     }
+
+    function porgentagem() {
+        let n1 = 100 
+        n1 = Number(document.getElementById("num1").value);
+        let n2 = 20  
+        n2 = Number(document.getElementById("num2").value);
+        let porcent = n2 / 100
+        console.log(porcent)
+
+        document.getElementById("resultado").textContent = "Resultado: " + (n1 * porcent)
+    }
+
+         function tutorial() {
+        document.getElementById("tutpor").textContent = "Bom dia, senhor ou senhora, a porcentagem funciona assim, o primeiro número que você digita, é a sua base, e o seu segundo número é quantos porcento, você quer daquela base, tenha um bom dia, e que Deus te abençoe."
+    }
+
+    function sairtut() {
+        document.getElementById("tutpor").textContent = ""
+    }
+    function tespor() {
+        por(100, 20)
+        if (por(100, 20) != 20) {
+            alert("função porcentagem falhou")
+            console.log("5")
+        }
+        else {
+            alert("porcentagem funciona")
+        }
+    }
+
     function testetodasasfunções() {
+        tespor()
         testesomar()
         testesubtrair()
         testedividir()
         testemultiplicacão()
     }
+
+   
+
 
 </script>
 
